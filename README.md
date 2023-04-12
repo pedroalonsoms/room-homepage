@@ -30,6 +30,10 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 - Purge references
 - Make sure svgs contain valid properties
 - Better image compression without loosing that much quality
+- Prevent initial font layout shifts
+- Extract navbar in its own component
+- Too much horizontal padding on screens over `max-w-2xl`
+- Better flex comprehension
 
 - Run rests when zooming-in
 - Cross-browser testing

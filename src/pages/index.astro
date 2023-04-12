@@ -1,8 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import IconHamburger from "../svgs/IconHamburger.astro";
+import Logo from "../svgs/Logo.astro";
 ---
 
 <Layout title="Frontend Mentor | Room homepage">
+  <header>
+    <div class="max-w-screen-2xl">
+      <div class="relative z-0 flex items-center bg-gray-400 px-4 py-10">
+        <button
+          id="primary-nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          class="absolute"
+        >
+          <IconHamburger class="text-my-neutral-100" />
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <div class="mx-auto">
+          <Logo class="text-my-neutral-100" />
+          <span class="sr-only">Room</span>
+        </div>
+
+        <nav class="hidden">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main></main>
+
+  <footer></footer>
+
   <div>
     Home Shop About Contact Discover innovative ways to decorate We provide
     unmatched quality, comfort, and style for property owners across the
@@ -24,11 +58,41 @@ import Layout from "../layouts/Layout.astro";
     need, from traditional to contemporary styles or anything in between.
     Product specialists are available to help you create your dream space.
 
-    <p class="attribution">
-      Challenge by <a
-        href="https://www.frontendmentor.io?ref=challenge"
-        target="_blank">Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+    <p>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor.
+      </a>
+      Coded by <a href="#">Pedro Alonso Moreno Salcedo</a>.
     </p>
   </div>
 </Layout>
+
+<script>
+  const mobileNav = document.querySelector<HTMLButtonElement>("#mobile-nav");
+  const mobileNavToggle =
+    document.querySelector<HTMLDivElement>("#mobile-nav-toggle");
+
+  if (mobileNav && mobileNavToggle) {
+    let isNavOpen = false;
+    mobileNavToggle.addEventListener("click", () => {
+      if (!isNavOpen) {
+        mobileNav.classList.remove("hidden");
+        mobileNav.classList.add("block");
+
+        mobileNavToggle.setAttribute("aria-expanded", "true");
+
+        isNavOpen = true;
+      } else {
+        mobileNav.classList.remove("block");
+        mobileNav.classList.add("hidden");
+
+        mobileNavToggle.setAttribute("aria-expanded", "false");
+
+        isNavOpen = false;
+      }
+    });
+  } else {
+    console.error("ERROR: elements were not found on the DOM");
+  }
+</script>
