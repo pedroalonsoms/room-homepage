@@ -29,6 +29,7 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 - Make it pixel-perfect and color-perfect
 - Purge references
 - Make sure svgs contain valid properties
+- Better image compression without loosing that much quality
 
 - Run rests when zooming-in
 - Cross-browser testing
@@ -47,7 +48,6 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 - RGB to HSL color conversion: https://www.rapidtables.com/convert/color/rgb-to-hsl.html
 - How to Scale SVG: https://css-tricks.com/scale-svg/
 - SVGOMG - SVGO's Missing GUI: https://jakearchibald.github.io/svgomg/
-- Stack Exchange: https://webmasters.stackexchange.com/
 - Image Color Picker: https://imagecolorpicker.com/en
 - WebP converter by TinyIMG: https://tiny-img.com/webp/
 - CompressPNG: https://compresspng.com/
@@ -55,3 +55,4 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 - Optimizilla Image Compressor: https://imagecompressor.com/
 - W3 ORG: https://www.w3.org/
 - Deque University: https://dequeuniversity.com/
+- Stack Exchange: https://webmasters.stackexchange.com/
