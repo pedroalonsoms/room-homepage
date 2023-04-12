@@ -28,6 +28,7 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 - Accesibility & semantics
 - Make it pixel-perfect and color-perfect
 - Purge references
+- Make sure svgs contain valid properties
 
 - Run rests when zooming-in
 - Cross-browser testing
