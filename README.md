@@ -33,7 +33,11 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 - Prevent initial font layout shifts
 - Extract navbar in its own component
 - Too much horizontal padding on screens over `max-w-2xl`
-- Better flex comprehension
+- Better flex comprehension on the navbar
+- Confirm that `logo` tree-shaking is working
+- Better navbar design
+- Better css specificity comprehension
+- Improve duplicate class `group-[[data-open]]:sm:bg-transparent` for specificity reasons
 
 - Run rests when zooming-in
 - Cross-browser testing
@@ -60,3 +64,4 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 - W3 ORG: https://www.w3.org/
 - Deque University: https://dequeuniversity.com/
 - Stack Exchange: https://webmasters.stackexchange.com/
+- Typescript Docs: https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html

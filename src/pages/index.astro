@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import IconClose from "../svgs/IconClose.astro";
 import IconHamburger from "../svgs/IconHamburger.astro";
 import Logo from "../svgs/Logo.astro";
 ---
@@ -7,28 +8,58 @@ import Logo from "../svgs/Logo.astro";
 <Layout title="Frontend Mentor | Room homepage">
   <header>
     <div class="max-w-screen-2xl">
-      <div class="relative z-0 flex items-center bg-gray-400 px-4 py-10">
-        <button
-          id="primary-nav-toggle"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-          class="absolute"
+      <div class="group" id="primary-nav-wrapper">
+        <div
+          class="relative z-0 flex items-center px-6 py-10 group-[[data-open]]:bg-my-neutral-100 sm:bg-transparent group-[[data-open]]:sm:bg-transparent"
         >
-          <IconHamburger class="text-my-neutral-100" />
-          <span class="sr-only">Menu</span>
-        </button>
+          <button
+            id="primary-nav-toggle"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            class="absolute bottom-0 left-6 top-0 z-0 sm:hidden"
+          >
+            <IconHamburger
+              class="text-my-neutral-100 group-[[data-open]]:hidden"
+            />
+            <IconClose
+              class="hidden text-my-neutral-300 group-[[data-open]]:block"
+            />
+            <span class="sr-only">Menu</span>
+          </button>
 
-        <div class="mx-auto">
-          <Logo class="text-my-neutral-100" />
-          <span class="sr-only">Room</span>
+          <div
+            class="mx-auto group-[[data-open]]:hidden sm:mx-0 sm:block group-[[data-open]]:sm:block"
+          >
+            <Logo class="text-my-neutral-100" />
+            <span class="sr-only">Room</span>
+          </div>
+
+          <nav
+            class="ml-auto hidden gap-9 group-[[data-open]]:flex sm:flex"
+            id="primary-nav"
+          >
+            <a
+              href="#"
+              class="font-semibold lowercase leading-none tracking-tighter text-my-neutral-900 sm:text-my-neutral-100"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="font-semibold lowercase leading-none tracking-tighter text-my-neutral-900 sm:text-my-neutral-100"
+              >Shop</a
+            >
+            <a
+              href="#"
+              class="font-semibold lowercase leading-none tracking-tighter text-my-neutral-900 sm:text-my-neutral-100"
+              >About</a
+            >
+            <a
+              href="#"
+              class="font-semibold lowercase leading-none tracking-tighter text-my-neutral-900 sm:text-my-neutral-100"
+              >Contact</a
+            >
+          </nav>
         </div>
-
-        <nav class="hidden">
-          <a href="#">Home</a>
-          <a href="#">Shop</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-        </nav>
       </div>
     </div>
   </header>
@@ -63,31 +94,32 @@ import Logo from "../svgs/Logo.astro";
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor.
       </a>
-      Coded by <a href="#">Pedro Alonso Moreno Salcedo</a>.
+      Coded by <a href="#" class="text-sm lowercase"
+        >Pedro Alonso Moreno Salcedo</a
+      >.
     </p>
   </div>
 </Layout>
 
 <script>
-  const mobileNav = document.querySelector<HTMLButtonElement>("#mobile-nav");
-  const mobileNavToggle =
-    document.querySelector<HTMLDivElement>("#mobile-nav-toggle");
+  const primaryNavWrapper = document.querySelector<HTMLDivElement>(
+    "#primary-nav-wrapper"
+  );
+  const primaryNavToggle = document.querySelector<HTMLDivElement>(
+    "#primary-nav-toggle"
+  );
 
-  if (mobileNav && mobileNavToggle) {
+  if (primaryNavWrapper && primaryNavToggle) {
     let isNavOpen = false;
-    mobileNavToggle.addEventListener("click", () => {
+    primaryNavToggle.addEventListener("click", () => {
       if (!isNavOpen) {
-        mobileNav.classList.remove("hidden");
-        mobileNav.classList.add("block");
-
-        mobileNavToggle.setAttribute("aria-expanded", "true");
+        primaryNavWrapper.toggleAttribute("data-open");
+        primaryNavToggle.setAttribute("aria-expanded", "true");
 
         isNavOpen = true;
       } else {
-        mobileNav.classList.remove("block");
-        mobileNav.classList.add("hidden");
-
-        mobileNavToggle.setAttribute("aria-expanded", "false");
+        primaryNavWrapper.toggleAttribute("data-open");
+        primaryNavToggle.setAttribute("aria-expanded", "false");
 
         isNavOpen = false;
       }
