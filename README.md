@@ -38,6 +38,10 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 - Better navbar design
 - Better css specificity comprehension
 - Improve duplicate class `group-[[data-open]]:sm:bg-transparent` for specificity reasons
+- Better navbar JavaScript implementation
+- Remove tailwind treeshaking hack on `body`
+- Carrousel accesibility, implement `tabindex`
+- Lazy load images to "cache" them
 
 - Run rests when zooming-in
 - Cross-browser testing

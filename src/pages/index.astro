@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import IconAngle from "../svgs/IconAngle.astro";
+import IconArrow from "../svgs/IconArrow.astro";
 import IconClose from "../svgs/IconClose.astro";
 import IconHamburger from "../svgs/IconHamburger.astro";
 import Logo from "../svgs/Logo.astro";
@@ -7,124 +9,179 @@ import Logo from "../svgs/Logo.astro";
 
 <Layout title="Frontend Mentor | Room homepage">
   <header>
-    <div class="max-w-screen-2xl">
-      <div class="group" id="primary-nav-wrapper">
-        <div
-          class="relative z-0 flex items-center px-6 py-10 group-[[data-open]]:bg-my-neutral-100 sm:bg-transparent group-[[data-open]]:sm:bg-transparent"
+    <div class="max-w-screen-2xl bg-black">
+      <div
+        class="relative z-0 flex items-center px-6 py-10 sm:px-14 sm:py-14"
+        id="primary-nav-wrapper"
+      >
+        <button
+          id="primary-nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          class="absolute bottom-0 left-6 top-0 z-0 sm:hidden"
         >
-          <button
-            id="primary-nav-toggle"
-            aria-expanded="false"
-            aria-controls="primary-nav"
-            class="absolute bottom-0 left-6 top-0 z-0 sm:hidden"
-          >
-            <IconHamburger
-              class="text-my-neutral-100 group-[[data-open]]:hidden"
-            />
-            <IconClose
-              class="hidden text-my-neutral-300 group-[[data-open]]:block"
-            />
-            <span class="sr-only">Menu</span>
-          </button>
+          <IconHamburger
+            class="text-my-neutral-100"
+            id="primary-nav-toggle-icon-hamburger"
+          />
+          <IconClose
+            class="hidden text-my-neutral-300"
+            id="primary-nav-toggle-icon-close"
+          />
+          <span class="sr-only">Menu</span>
+        </button>
 
-          <div
-            class="mx-auto group-[[data-open]]:hidden sm:mx-0 sm:block group-[[data-open]]:sm:block"
-          >
-            <Logo class="text-my-neutral-100" />
-            <span class="sr-only">Room</span>
-          </div>
-
-          <nav
-            class="ml-auto hidden gap-9 group-[[data-open]]:flex sm:flex"
-            id="primary-nav"
-          >
-            <a
-              href="#"
-              class="font-semibold lowercase leading-none tracking-tighter text-my-neutral-900 sm:text-my-neutral-100"
-              >Home</a
-            >
-            <a
-              href="#"
-              class="font-semibold lowercase leading-none tracking-tighter text-my-neutral-900 sm:text-my-neutral-100"
-              >Shop</a
-            >
-            <a
-              href="#"
-              class="font-semibold lowercase leading-none tracking-tighter text-my-neutral-900 sm:text-my-neutral-100"
-              >About</a
-            >
-            <a
-              href="#"
-              class="font-semibold lowercase leading-none tracking-tighter text-my-neutral-900 sm:text-my-neutral-100"
-              >Contact</a
-            >
-          </nav>
+        <div class="mx-auto sm:mx-0" id="primary-nav-logo">
+          <Logo class="text-my-neutral-100" />
+          <span class="sr-only">Room</span>
         </div>
+
+        <nav class="ml-auto hidden gap-9 sm:ml-14 sm:flex" id="primary-nav">
+          <a
+            href="#"
+            class="font-semibold lowercase leading-none tracking-tighter text-my-neutral-900 sm:text-my-neutral-100"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="font-semibold lowercase leading-none tracking-tighter text-my-neutral-900 sm:text-my-neutral-100"
+            >Shop</a
+          >
+          <a
+            href="#"
+            class="font-semibold lowercase leading-none tracking-tighter text-my-neutral-900 sm:text-my-neutral-100"
+            >About</a
+          >
+          <a
+            href="#"
+            class="font-semibold lowercase leading-none tracking-tighter text-my-neutral-900 sm:text-my-neutral-100"
+            >Contact</a
+          >
+        </nav>
       </div>
     </div>
   </header>
-
-  <main></main>
-
-  <footer></footer>
-
-  <div>
-    Home Shop About Contact Discover innovative ways to decorate We provide
-    unmatched quality, comfort, and style for property owners across the
-    country. Our experts combine form and function in bringing your vision to
-    life. Create a room in your own style with our collection and make your
-    property a reflection of you and what you love. Shop now We are available
-    all across the globe With stores all over the world, it's easy for you to
-    find furniture for your home or place of business. Locally, we're in most
-    major cities throughout the country. Find the branch nearest you using our
-    store locator. Any questions? Don't hesitate to contact us today. Shop now
-    Manufactured with the best materials Our modern furniture store provide a
-    high level of quality. Our company has invested in advanced technology to
-    ensure that every product is made as perfect and as consistent as possible.
-    With three decades of experience in this industry, we understand what
-    customers want for their home and office. Shop now About our furniture Our
-    multifunctional collection blends design and function to suit your
-    individual taste. Make each room unique, or pick a cohesive theme that best
-    express your interests and what inspires you. Find the furniture pieces you
-    need, from traditional to contemporary styles or anything in between.
-    Product specialists are available to help you create your dream space.
-
-    <p>
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor.
-      </a>
-      Coded by <a href="#" class="text-sm lowercase"
-        >Pedro Alonso Moreno Salcedo</a
-      >.
-    </p>
-  </div>
 </Layout>
 
+<main>
+  <section>
+    <h1 class="sr-only">Room features</h1>
+    <article>
+      <div>
+        <picture>
+          <source srcset="" />
+          <img src="images/mobile/hero-1.webp" alt="" />
+        </picture>
+      </div>
+      <div>
+        <h2>Discover innovative ways to decorate</h2>
+        <p>
+          We provide unmatched quality, comfort, and style for property owners
+          across the country. Our experts combine form and function in bringing
+          your vision to life. Create a room in your own style with our
+          collection and make your property a reflection of you and what you
+          love.
+        </p>
+        <div>
+          <a href="#">Shop now</a>
+          <IconArrow />
+        </div>
+        <div>
+          <button>
+            <IconAngle />
+          </button>
+          <button>
+            <IconAngle />
+          </button>
+        </div>
+      </div>
+    </article>
+  </section>
+  <section>
+    <h1 class="sr-only">About our furniture</h1>
+    <div>
+      <picture>
+        <img src="images/about-dark.webp" alt="" />
+      </picture>
+    </div>
+    <p>
+      Our multifunctional collection blends design and function to suit your
+      individual taste. Make each room unique, or pick a cohesive theme that
+      best express your interests and what inspires you. Find the furniture
+      pieces you need, from traditional to contemporary styles or anything in
+      between. Product specialists are available to help you create your dream
+      space.
+    </p>
+    <div>
+      <picture>
+        <img src="images/about-light.webp" alt="" />
+      </picture>
+    </div>
+  </section>
+</main>
+
+<footer></footer>
+
+<div>
+  We are available all across the globe With stores all over the world, it's
+  easy for you to find furniture for your home or place of business. Locally,
+  we're in most major cities throughout the country. Find the branch nearest you
+  using our store locator. Any questions? Don't hesitate to contact us today.
+  Shop now Manufactured with the best materials Our modern furniture store
+  provide a high level of quality. Our company has invested in advanced
+  technology to ensure that every product is made as perfect and as consistent
+  as possible. With three decades of experience in this industry, we understand
+  what customers want for their home and office. Shop now About our furniture
+
+  <p>
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor.
+    </a>
+    Coded by <a href="#" class="text-sm lowercase"
+      >Pedro Alonso Moreno Salcedo</a
+    >.
+  </p>
+</div>
+
 <script>
-  const primaryNavWrapper = document.querySelector<HTMLDivElement>(
-    "#primary-nav-wrapper"
-  );
-  const primaryNavToggle = document.querySelector<HTMLDivElement>(
-    "#primary-nav-toggle"
-  );
+  function getElementByIdOrFail(id: string) {
+    const element = document.getElementById(id);
 
-  if (primaryNavWrapper && primaryNavToggle) {
-    let isNavOpen = false;
-    primaryNavToggle.addEventListener("click", () => {
-      if (!isNavOpen) {
-        primaryNavWrapper.toggleAttribute("data-open");
-        primaryNavToggle.setAttribute("aria-expanded", "true");
+    if (element !== null) {
+      return element;
+    }
 
-        isNavOpen = true;
-      } else {
-        primaryNavWrapper.toggleAttribute("data-open");
-        primaryNavToggle.setAttribute("aria-expanded", "false");
-
-        isNavOpen = false;
-      }
-    });
-  } else {
-    console.error("ERROR: elements were not found on the DOM");
+    throw new Error(`ERROR: could not find element with id ${id}`);
   }
+
+  const primaryNavWrapper = getElementByIdOrFail("primary-nav-wrapper");
+  const primaryNavToggle = getElementByIdOrFail("primary-nav-toggle");
+  const primaryNavToggleIconHamburger = getElementByIdOrFail(
+    "primary-nav-toggle-icon-hamburger"
+  );
+  const primaryNavToggleIconClose = getElementByIdOrFail(
+    "primary-nav-toggle-icon-close"
+  );
+  const primaryNavLogo = getElementByIdOrFail("primary-nav-logo");
+  const primaryNav = getElementByIdOrFail("primary-nav");
+
+  let isNavOpen = false;
+  primaryNavToggle.addEventListener("click", () => {
+    isNavOpen = !isNavOpen;
+
+    primaryNavToggle.setAttribute("aria-expanded", String(isNavOpen));
+
+    primaryNavToggleIconHamburger.classList.toggle("hidden");
+    primaryNavToggleIconClose.classList.toggle("hidden");
+
+    primaryNavLogo.classList.toggle("hidden");
+
+    primaryNav.classList.toggle("hidden");
+    primaryNav.classList.toggle("flex");
+
+    primaryNavWrapper.classList.toggle("bg-my-neutral-100");
+
+    isNavOpen = true;
+  });
 </script>
