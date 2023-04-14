@@ -42,6 +42,8 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 - Remove tailwind treeshaking hack on `body`
 - Carrousel accesibility, implement `tabindex`
 - Lazy load images to "cache" them
+- Change images to `jpg` instead of `webp`?
+- Lossles Compress `jpg`?
 
 - Run rests when zooming-in
 - Cross-browser testing

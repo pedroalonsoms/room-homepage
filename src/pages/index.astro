@@ -9,9 +9,9 @@ import Logo from "../svgs/Logo.astro";
 
 <Layout title="Frontend Mentor | Room homepage">
   <header>
-    <div class="max-w-screen-2xl bg-black">
+    <div class="relative z-0 mx-auto max-w-screen-2xl">
       <div
-        class="relative z-0 flex items-center px-6 py-10 sm:px-14 sm:py-14"
+        class="absolute inset-x-0 top-0 z-10 flex items-center px-6 py-10 sm:bg-transparent sm:px-14 sm:py-14"
         id="primary-nav-wrapper"
       >
         <button
@@ -70,51 +70,73 @@ import Logo from "../svgs/Logo.astro";
       <div>
         <picture>
           <source srcset="" />
-          <img src="images/mobile/hero-1.webp" alt="" />
+          <img
+            src="images/mobile/hero-1.webp"
+            width="375"
+            height="360"
+            alt=""
+            class="h-full w-full object-cover"
+          />
         </picture>
       </div>
-      <div>
-        <h2>Discover innovative ways to decorate</h2>
-        <p>
+      <div class="relative z-0 px-8 pt-12">
+        <h2 class="text-4xl font-semibold tracking-tighter">
+          Discover innovative ways to decorate
+        </h2>
+        <p
+          class="mt-3 font-medium leading-snug tracking-tight text-my-neutral-300"
+        >
           We provide unmatched quality, comfort, and style for property owners
           across the country. Our experts combine form and function in bringing
           your vision to life. Create a room in your own style with our
           collection and make your property a reflection of you and what you
           love.
         </p>
-        <div>
-          <a href="#">Shop now</a>
-          <IconArrow />
-        </div>
-        <div>
-          <button>
-            <IconAngle />
+        <a
+          href="#"
+          class="mb-16 mt-10 inline-flex items-center gap-4 text-sm font-medium uppercase leading-none tracking-[0.75em] hover:text-my-neutral-300"
+          >Shop now <IconArrow /></a
+        >
+
+        <div class="absolute right-0 top-0 z-10 flex -translate-y-full">
+          <button
+            class="grid place-items-center bg-my-neutral-900 p-5 hover:bg-my-neutral-600"
+          >
+            <IconAngle class="h-4 w-4 rotate-180 text-my-neutral-100" />
           </button>
-          <button>
-            <IconAngle />
+          <button
+            class="grid place-items-center bg-my-neutral-900 p-5 hover:bg-my-neutral-600"
+          >
+            <IconAngle class="h-4 w-4 text-my-neutral-100" />
           </button>
         </div>
       </div>
     </article>
   </section>
   <section>
-    <h1 class="sr-only">About our furniture</h1>
     <div>
       <picture>
-        <img src="images/about-dark.webp" alt="" />
+        <img src="images/about-dark.webp" alt="" width="420" height="266" />
       </picture>
     </div>
-    <p>
-      Our multifunctional collection blends design and function to suit your
-      individual taste. Make each room unique, or pick a cohesive theme that
-      best express your interests and what inspires you. Find the furniture
-      pieces you need, from traditional to contemporary styles or anything in
-      between. Product specialists are available to help you create your dream
-      space.
-    </p>
+    <div class="px-8">
+      <h1 class="pt-11 text-sm font-bold uppercase tracking-[0.4em]">
+        About our furniture
+      </h1>
+      <p
+        class="mb-10 mt-3 font-medium leading-snug tracking-tight text-my-neutral-300"
+      >
+        Our multifunctional collection blends design and function to suit your
+        individual taste. Make each room unique, or pick a cohesive theme that
+        best express your interests and what inspires you. Find the furniture
+        pieces you need, from traditional to contemporary styles or anything in
+        between. Product specialists are available to help you create your dream
+        space.
+      </p>
+    </div>
     <div>
       <picture>
-        <img src="images/about-light.webp" alt="" />
+        <img src="images/about-light.webp" alt="" width="420" height="266" />
       </picture>
     </div>
   </section>
