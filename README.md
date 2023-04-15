@@ -50,6 +50,7 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 - Improve carrousel SEO and accesibility
 - Consistent margin and padding usage
 - Better image handling, use proper `width` and `height` instead of absolute positioning for gettnig them to be the minimum height of the container
+- Fix image layout shifting on page load
 
 - Run rests when zooming-in
 - Cross-browser testing
