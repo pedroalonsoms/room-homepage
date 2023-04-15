@@ -45,6 +45,11 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 - Change images to `jpg` instead of `webp`?
 - Lossles Compress `jpg`?
 - Lazy load carrousel images
+- Pass image format to `webp`
+- Better `picture` `srcset` attributes and responsive images
+- Improve carrousel SEO and accesibility
+- Consistent margin and padding usage
+- Better image handling, use proper `width` and `height` instead of absolute positioning for gettnig them to be the minimum height of the container
 
 - Run rests when zooming-in
 - Cross-browser testing
@@ -72,3 +77,5 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 - Deque University: https://dequeuniversity.com/
 - Stack Exchange: https://webmasters.stackexchange.com/
 - Typescript Docs: https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html
+- Compress JPG with the force of an elephant: https://compressjpeg.com/
+- Tiny img Webp: https://tiny-img.com/webp/
